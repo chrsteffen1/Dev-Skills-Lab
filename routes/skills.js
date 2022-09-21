@@ -1,10 +1,10 @@
 import { Router } from 'express'
-import * as devSkillsCtrl from '../controllers/devSkills.js'
+import * as skillsCtrl from '../controllers/skills.js'
 
 const router = Router()
 
 /* GET users listing. */
-router.get('/', devSkillsCtrl.index)
+router.get('/', skillsCtrl.index)
 
 
 export {

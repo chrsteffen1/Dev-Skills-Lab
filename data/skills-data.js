@@ -1,4 +1,4 @@
-const devSkills = [
+const skills = [
   {text: 'Html', learned: true},
   {text: 'Css', learned: true},
   {text: 'Javascript', learned: true},
@@ -7,5 +7,5 @@ const devSkills = [
 ]
 
 export {
-  devSkills
+  skills
 }
