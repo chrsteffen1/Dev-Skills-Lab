@@ -1,11 +1,11 @@
 import { Router } from 'express'
+import * as devSkillsCtrl from '../controllers/devSkills.js'
 
 const router = Router()
 
 /* GET users listing. */
-router.get('/', function(req, res) {
-  res.send('respond with a resource')
-})
+router.get('/', devSkillsCtrl.index)
+
 
 export {
   router
