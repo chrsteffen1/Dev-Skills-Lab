@@ -5,7 +5,7 @@ const router = Router()
 
 /* GET users listing. */
 router.get('/', skillsCtrl.index)
-
+router.get('/new', skillsCtrl.new)
 
 export {
   router
