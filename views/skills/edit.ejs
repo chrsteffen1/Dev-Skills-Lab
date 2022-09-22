@@ -8,11 +8,10 @@
   <title>Document</title>
 </head>
 <body>
-  <h1>Skills</h1>
-  <a href="/skills/<%= skill._id %>/edit">Edit Skill</a>
-  <h2>skill #<%= skill._id %></h2>
-  <h3><%= skill.text %></h3>
-  <p>Learned: <%= skill.learned ? 'Yes' : 'No' %></p>
-	<a href="/skills">Go back</a>
+  <form action="/skills/<%= skill._id %>?_method=PUT" method="post" autocomplete="off">
+    <input type="text" name="text"  value="<%= skill.text %> ">
+    <input type="checkbox" name="learned" <%= skill.learned ? 'checked' : '' %> >
+    <button type="submit">Update Skill</button>
+  </form>
 </body>
 </html>
