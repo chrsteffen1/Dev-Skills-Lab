@@ -19,8 +19,10 @@ function newSkill(req,res) {
 }
 
 function create(req,res) {
+  console.log('REQ BODY', req.body)
+  req.body.learned = !!req.body.learned
   Skills.create(req.body)
-  .then(skills => {
+  .then(skill => {
     res.redirect('/skills')
   })
   .catch(error => {
@@ -54,7 +56,6 @@ function deleteSkill(req,res) {
 }
 
 function edit(req, res) {
-
   Skills.findById(req.params.id)
   .then(skill => {
     res.render('skills/edit', {
